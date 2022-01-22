@@ -1,2 +1,2 @@
 # Gesture-Controlled-CAD-Mod
-This project takes the position of the user's hand and translates it into CAD control using OpenCV.
+This project was a fun introduction to python and computer vision for me. I was inpsired by the Iron Man movies to try to control an object's position using gestures. While something similar has been done with a Leap motion controller, using only a camera to interact with CAD is a unique idea. To do this, the code takes the position of the user's hand and translates it into mouse coordinates. The OpenCV tracking part (which is the majority of the code) is built off this tutorial: https://www.pyimagesearch.com/2018/07/30/opencv-object-tracking/. 

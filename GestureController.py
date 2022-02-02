@@ -1,3 +1,5 @@
+#Almost all of this code is taken from the tutorial: https://www.pyimagesearch.com/2018/07/30/opencv-object-tracking/
+#I added on the pyautogui code to move the mouse according to the hand movements
 from imutils.video import VideoStream
 from imutils.video import FPS
 import argparse
@@ -51,14 +53,6 @@ else:
 # initialize the FPS throughput estimator
 fps = None
 # loop over frames from the video stream
-x1 = 1
-x2 = 1
-z = 0
-y1 = 1
-y2 = 1
-d = 0
-dist1 = 1
-dist2 = 1
 while True:
 	# grab the current frame, then handle if we are using a
 	# VideoStream or VideoCapture object
@@ -96,7 +90,7 @@ while True:
 				
 	# compute the bounding box of the of the paper region and return it
 				return cv2.minAreaRect(c)
-			marker = find_marker(mask)
+			marker = find_marker(mask) 
 		ex = (x - 300) * -5 + 800
 		ey = y * 5 - 300
 		# Any duration less than this is rounded to 0.0 to instantly move the mouse.
